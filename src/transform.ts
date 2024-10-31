@@ -53,7 +53,7 @@ function transformAlias(
   aliasesExclude: (string | RegExp)[]
 ) {
   if (
-    aliases.length &&
+    aliases?.length &&
     !aliasesExclude.some(e => (isRegExp(e) ? e.test(importer) : String(e) === importer))
   ) {
     const matchedAlias = aliases.find(alias => isAliasMatch(alias, importer))
